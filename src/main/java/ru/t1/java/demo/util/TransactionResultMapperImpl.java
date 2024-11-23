@@ -2,10 +2,10 @@ package ru.t1.java.demo.util;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import ru.t1.java.demo.dto.TransactionForAccept;
-import ru.t1.java.demo.dto.TransactionResult;
 import ru.t1.java.demo.mapper.TransactionResultMapper;
 import ru.t1.java.demo.model.Transaction;
+import ru.t1.java.demo.model.dto.TransactionForAccept;
+import ru.t1.java.demo.model.dto.TransactionResult;
 
 import static ru.t1.java.demo.model.enums.TransactionStatusEnum.BLOCKED;
 
