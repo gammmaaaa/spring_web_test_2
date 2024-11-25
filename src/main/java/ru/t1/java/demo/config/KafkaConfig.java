@@ -20,9 +20,9 @@ import org.springframework.kafka.support.serializer.ErrorHandlingDeserializer;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
 import org.springframework.kafka.support.serializer.JsonSerializer;
 import org.springframework.util.backoff.FixedBackOff;
-import ru.t1.java.demo.dto.TransactionForAccept;
 import ru.t1.java.demo.kafka.KafkaProducer;
 import ru.t1.java.demo.kafka.MessageDeserializer;
+import ru.t1.java.demo.model.dto.TransactionForAccept;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -83,7 +83,7 @@ public class KafkaConfig<T> {
 
     @Bean
     ConcurrentKafkaListenerContainerFactory<String, TransactionForAccept> kafkaListenerContainerTransactionForAcceptFactory() {
-        return (ConcurrentKafkaListenerContainerFactory<String, TransactionForAccept>) kafkaListenerContainerFactory("ru.t1.java.demo.dto.TransactionForAccept");
+        return (ConcurrentKafkaListenerContainerFactory<String, TransactionForAccept>) kafkaListenerContainerFactory("ru.t1.java.demo.model.dto.TransactionForAccept");
     }
 
     private void factoryBuilder(ConsumerFactory<String, T> consumerFactory, ConcurrentKafkaListenerContainerFactory<String, T> factory) {

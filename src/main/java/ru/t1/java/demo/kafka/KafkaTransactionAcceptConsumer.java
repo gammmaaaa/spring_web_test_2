@@ -8,10 +8,10 @@ import org.springframework.kafka.support.Acknowledgment;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-import ru.t1.java.demo.dto.TransactionForAccept;
-import ru.t1.java.demo.dto.TransactionResult;
 import ru.t1.java.demo.mapper.TransactionResultMapper;
 import ru.t1.java.demo.model.Transaction;
+import ru.t1.java.demo.model.dto.TransactionForAccept;
+import ru.t1.java.demo.model.dto.TransactionResult;
 import ru.t1.java.demo.service.TransactionService;
 
 import java.math.BigDecimal;
